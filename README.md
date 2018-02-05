@@ -1,4 +1,5 @@
 # hdtr-python
+[![WTFPL](http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-1.png)](http://www.wtfpl.net/)
 
 This a python script (WIP) which renders an HDTR image from a set of pictures of the same place taken at different times (usually at intervals as if they were shot to render a timelapse). 
 
