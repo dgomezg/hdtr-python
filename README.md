@@ -15,6 +15,17 @@ The aim of this project is to provide an open source alternative in python that 
 
 The repository includes some sets of low-res pictures that can be used to test the script.
 
+## Requirements
+
+### Pillow
+This script uses Pillow, the "PIL friendly fork" that includes support for handling Tiff image files.
+
+Pillow can be instaled through pip:
+
+```
+ sudo python3 -m pip install Pillow
+```
+
 ## See Also
 
 - [The original HDTR site by Martin Krzywinski](http://mkweb.bcgsc.ca/fun/hdtr/)
