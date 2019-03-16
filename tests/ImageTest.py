@@ -1,7 +1,6 @@
 import unittest
 from image_processing import processor
 
-
 class TestStringMethods(unittest.TestCase):
 
     def test_should_read_image_from_source(self):
