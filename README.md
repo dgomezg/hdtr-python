@@ -17,5 +17,5 @@ The repository includes some sets of low-res pictures that can be used to test t
 
 ## See Also
 
-- [The original HDTR site by Martin Krzywinski] (http://mkweb.bcgsc.ca/fun/hdtr/)
-- [An slideset explaining the shooting and rendering process] (https://www.slideshare.net/dgomezg/hdtr-psjs)
+- [The original HDTR site by Martin Krzywinski](http://mkweb.bcgsc.ca/fun/hdtr/)
+- [An slideset explaining the shooting and rendering process](https://www.slideshare.net/dgomezg/hdtr-psjs)
