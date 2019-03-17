@@ -16,4 +16,17 @@ output_file_name = OUTPUT_PATH + "/" + datetime.today().strftime('%Y%m%d-%H%M%S'
 outputImage = base_image.save(output_file_name)
 
 savedImage = Image.open(output_file_name)
-print(savedImage.format, base_image.format)
+
+
+image2 = Image.open(SAMPLE2_IMAGE_PATH)
+print(image2.format, image2.size, image2.mode)
+
+width = base_image.size[0]
+height = base_image.size[1]
+layer_width_start = int(round(width/2))
+layer2 = image2.crop((layer_width_start , 0, width, height))
+savedImage.paste(layer2, (layer_width_start , 0, width, height))
+
+savedImage.show()
+
+
