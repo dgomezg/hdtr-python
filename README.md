@@ -13,7 +13,13 @@ The aim of this project is to provide an open source alternative in python that 
 
 ## Sample files
 
+Under the `samples` folder you will find some sample sets that can be used to run the script
+
+### Source files
 The repository includes some sets of low-res pictures that can be used to test the script.
+
+### Output files
+For each set of source files, there is one or more sample processed files in a final folder. You can try out your own results. The recomended output folder for your tests is `samples/**/output`. That folder is ignored by git.
 
 ## Requirements
 
@@ -25,6 +31,17 @@ Pillow can be instaled through pip:
 ```
  sudo python3 -m pip install Pillow
 ```
+
+<!--
+Check that standard installation has support for tiff images, as described in
+https://pillow.readthedocs.io/en/stable/installation.html#external-libraries
+
+if not, it should probably be installed with
+```
+sudo python3 -m pip install pillow --global-option="build_ext" --global-option="--enable-[feature]"
+```
+
+-->
 
 ### pytest
 To be able to execute the unit tests, pytest is recomended, it can be installed using:
