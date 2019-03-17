@@ -26,6 +26,14 @@ Pillow can be instaled through pip:
  sudo python3 -m pip install Pillow
 ```
 
+### pytest
+To be able to execute the unit tests, pytest is recomended, it can be installed using:
+
+```
+python3 -m pip install -U pytest --user
+```
+
+
 ## See Also
 
 - [The original HDTR site by Martin Krzywinski](http://mkweb.bcgsc.ca/fun/hdtr/)
