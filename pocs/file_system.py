@@ -4,9 +4,10 @@ from pathlib import Path
 SOURCE_PATH = "samples/Toledo/sources"
 
 pathlist = Path(SOURCE_PATH).glob('**/*.jpg')
-files = 0
 for path in pathlist:
     print(str(path))
-    files += 1
 
-print('there are', files, 'images to process in', SOURCE_PATH)
+#Get the number of files in pahtlist
+totalFiles = len([f for f in pathlist])
+
+print('there are', totalFiles, 'images to process in', SOURCE_PATH)
