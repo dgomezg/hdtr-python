@@ -8,6 +8,6 @@ for path in pathlist:
     print(str(path))
 
 #Get the number of files in pahtlist
-totalFiles = len([f for f in pathlist])
+totalFiles = len([f for f in Path(SOURCE_PATH).glob('**/*.jpg')])
 
 print('there are', totalFiles, 'images to process in', SOURCE_PATH)
