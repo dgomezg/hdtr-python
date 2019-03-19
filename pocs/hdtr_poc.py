@@ -4,8 +4,9 @@ from datetime import datetime
 
 
 #These will be part of the script configuration.
-SOURCE_PATH = "samples/Toledo/sources"
-OUTPUT_PATH = "samples/Toledo/output"
+SAMPLE_SET = "Alhambra-Granada"
+SOURCE_PATH = "samples/" + SAMPLE_SET + "/sources"
+OUTPUT_PATH = "samples/" + SAMPLE_SET + "/output"
 
 def save_as_tiff(image):
     output_file_name = OUTPUT_PATH + "/" + datetime.today().strftime('%Y%m%d-%H%M%S%f') + ".tiff"
@@ -36,7 +37,7 @@ for file in files:
     current_image = Image.open(file)
     x0=column_width*column
     x1=column_width*(column +1)
-    print("Pasting column ", column, " from (", x0, ", 0,", x1, ",", height)    
+    print("Pasting column ", column, " from (", x0, ", 0,", x1, ",", height, ")")    
     layer = current_image.crop((x0 , 0, x1, height))
     final_image.paste(layer, (x0 , 0, x1, height))
     column += 1
