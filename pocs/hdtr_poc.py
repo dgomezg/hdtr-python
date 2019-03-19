@@ -1,12 +1,10 @@
 from pathlib import Path
 from PIL import Image
-import datetime
+from datetime import datetime
 
 
 #These will be part of the script configuration.
 SOURCE_PATH = "samples/Toledo/sources"
-SAMPLE_IMAGE_PATH = SOURCE_PATH + "/0001-enf.jpg"
-SAMPLE2_IMAGE_PATH = SOURCE_PATH + "/0384-enf.jpg"
 OUTPUT_PATH = "samples/Toledo/output"
 
 def save_as_tiff(image):
