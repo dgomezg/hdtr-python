@@ -33,11 +33,10 @@ height = size[1]
 
 column = 0
 for file in files:
-    print("Processing", file)
     current_image = Image.open(file)
     x0=column_width*column
     x1=column_width*(column +1)
-    print("Pasting column ", column, " from (", x0, ", 0,", x1, ",", height, ")")    
+    print("Pasting column ", column, " from ", file, " at (", x0, ", 0,", x1, ",", height, ")")    
     layer = current_image.crop((x0 , 0, x1, height))
     final_image.paste(layer, (x0 , 0, x1, height))
     column += 1
