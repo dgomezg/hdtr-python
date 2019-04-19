@@ -24,7 +24,7 @@ def generate_mask(size):
         value = 255-(255*j/width)
         for i in range(height):
             mask_value[i].append(value)
-    return Image.fromarray(np.array(mask_value), "RGBA")
+    return Image.fromarray(np.uint8(np.array(mask_value)), "L")
 
 base_image = Image.open(SAMPLE_IMAGE_PATH)
 print(base_image.format, base_image.size, base_image.size[0], base_image.size[1], base_image.mode)
@@ -53,12 +53,13 @@ mask.show()
 
 composed_image = Image.composite(savedImage, image2, mask)
 composed_image.show()
+save_as_tiff(composed_image)
 
 print("image2 size", image2.size, "image 2 mode ", image2.mode)
 print("saved image size", savedImage.size, "saved Image mode ", savedImage.mode)
 savedImage.paste(image2, (0, 0, width, height), mask)
 
-image2.show()
+#image2.show()
 savedImage.show()
-#save_as_tiff(savedImage)
+save_as_tiff(savedImage)
 
