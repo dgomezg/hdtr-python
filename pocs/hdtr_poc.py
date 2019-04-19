@@ -41,7 +41,7 @@ for file in files:
     final_image.paste(layer, (x0 , 0, x1, height))
     column += 1
 
-#final_image.show()
+final_image.show()
 save_as_tiff(final_image)
 
 
