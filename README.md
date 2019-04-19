@@ -50,6 +50,11 @@ To be able to execute the unit tests, pytest is recomended, it can be installed 
 python3 -m pip install -U pytest --user
 ```
 
+## Try it out
+
+To try the current status of the script, open the `hdtr_poc.py` and change the `SAMPLE_SET` to the set of initial images that you want to try out.
+
+After that, from the project's root folder execute `python3 pocs/hdtr_poc.py`. Script will blend all the source files for the configured source `SAMPLE_SET` and the blended final image will be saved to the `output` folder of that `SAMPLE_SET`'s folder.
 
 ## See Also
 
