@@ -26,6 +26,25 @@ def generate_mask(size):
             mask_value[i].append(value)
     return Image.fromarray(np.uint8(np.array(mask_value)), "L")
 
+def generate_mask(size, start, finish):
+    mask_value = []
+    width = size[0]
+    height = size [1]
+    gradient_length = finish - start
+    for i in range(height):
+        mask_value.append([])
+    for j in range(width):
+        if (j < start):
+            value = 255
+        elif start <= j  < finish:
+            value = 255-(255*(j-start)/gradient_length)
+        else:
+            value = 0
+        for i in range(height):
+            mask_value[i].append(value)
+    return Image.fromarray(np.uint8(np.array(mask_value)), "L")
+
+
 base_image = Image.open(SAMPLE_IMAGE_PATH)
 print(base_image.format, base_image.size, base_image.size[0], base_image.size[1], base_image.mode)
 savedImage = save_as_tiff(base_image)
@@ -40,13 +59,9 @@ layer_width_start = int(round(width/2))
 layer2 = image2.crop((0 , 0, width, height))
 print("layer size", layer2.size)
 
-mask_array = np.random.rand(layer2.size[1], layer2.size[0]) 
-print(mask_array)
-mask = Image.fromarray(np.uint8(255*(mask_array)))
-
 #mask = Image.fromarray(np.uint8(255*(np.random.rand(layer2.size[1], layer2.size[0]) > 0.7))) 
 #print("Mask size", mask.size)
-mask = generate_mask(layer2.size)
+mask = generate_mask(layer2.size, 640, 1280)
 print("mask size", mask.size, " mask mode ", mask.mode)
 
 mask.show()
