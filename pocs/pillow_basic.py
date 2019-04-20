@@ -61,10 +61,10 @@ print("layer size", layer2.size)
 
 #mask = Image.fromarray(np.uint8(255*(np.random.rand(layer2.size[1], layer2.size[0]) > 0.7))) 
 #print("Mask size", mask.size)
-mask = generate_mask(layer2.size, 640, 1280)
+#mask = generate_mask(layer2.size, 640, 1280)
+mask = generate_mask(layer2.size, 0, layer2.width)
 print("mask size", mask.size, " mask mode ", mask.mode)
-
-mask.show()
+#mask.show()
 
 composed_image = Image.composite(savedImage, image2, mask)
 composed_image.show()

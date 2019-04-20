@@ -7,5 +7,7 @@ class TestStringMethods(unittest.TestCase):
         img = processor.create_image_from("../samples/Toledo/sources/0001-enf.jpg")
         self.assertIsNotNone(img, "Image not loaded!")
 
+        
+
 if __name__ == '__main__':
     unittest.main()
